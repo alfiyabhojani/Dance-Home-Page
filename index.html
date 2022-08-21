@@ -15,23 +15,30 @@
     <div class="container">
       <div class="section">
         <div class="left">
-          <img
+          <!-- <img
             src="./Dance Home Landing Page/Logo.png"
             alt=""
             srcset=""
             class="logo"
-          />
+          /> -->
+          <img src="./image/pexels-rfstudio-3819572.jpg" alt="" srcset="" />
         </div>
 
         <!-- heading -->
         <div class="right">
+          <div class="toggle" id="toggle">
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          </div>
+          <div class="vl"></div>
           <div class="heading">
-            <div class="vl"></div>
-            <div class="list">
-              <h5 class="item-home">Home</h5>
-              <h5 class="item">About Us</h5>
-              <h5 class="item">Portfolio</h5>
-              <h5 class="item">Contact</h5>
+            <div class="header-section" id="head__section">
+              <!-- Navigation items Starts -->
+              <section class="nav__section">
+                <li><a href="#" class="home"> Home</a></li>
+                <li><a href="#"> About </a></li>
+                <li><a href="#"> Portfolio</a></li>
+                <li><a href="#"> Contact</a></li>
+              </section>
             </div>
           </div>
           <!-- main -->
@@ -114,19 +121,26 @@
                   />
                 </div>
               </div>
-              </div>
+            </div>
 
-
-              <div class="bottom-right">
+            <div class="bottom-right">
               <div class="arrow">
                 <span>&#8595;</span>
               </div>
-              </div>
-
             </div>
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script>
+    const toggle = document.getElementById("toggle");
+    toggle.addEventListener("click", () => {
+      const setDisplayValue =
+        document.getElementById("head__section").style.display === "block"
+          ? "none"
+          : "block";
+      document.getElementById("head__section").style.display = setDisplayValue;
+    });
+  </script>
 </html>
